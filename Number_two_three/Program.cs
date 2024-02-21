@@ -12,9 +12,9 @@ namespace Number_two_three
         {
             try
             {
-                Console.WriteLine("Введите a точки: ");
+                Console.WriteLine("Введите a: ");
                 int a = int.Parse(Console.ReadLine());
-                Console.WriteLine("Введите c точки: ");
+                Console.WriteLine("Введите c: ");
                 int c = int.Parse(Console.ReadLine());
                 double v = 0;
 
