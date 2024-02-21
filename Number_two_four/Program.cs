@@ -19,7 +19,7 @@ namespace Number_two_four
                 Console.WriteLine("Введите c: ");
                 int c = int.Parse(Console.ReadLine());
                 double v = 0;
-
+                dsds
                 if (c >= 2)
                     v = a + Math.Sqrt(2 * c);
                 else if (c < 2)
