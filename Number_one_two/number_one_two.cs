@@ -4,6 +4,12 @@ namespace Number_one_two
 {
     class number_one_two
     {
+
+        /*
+            1.2.2. Найдите площадь кольца, внутренний радиус которого равен r, а
+            внешний – заданному числу R. Вычислите длину внешней окружности.
+         */
+
         static void Main(string[] args)
         {
             Console.WriteLine("Введите элемент r (внутренего кольца): ");

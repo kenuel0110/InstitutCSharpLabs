@@ -4,7 +4,10 @@ namespace Number_one_one
 {
     class number_one_one
     {
-        [STAThread]
+        /*
+            1.1.2. s = __2-f? +sin(7x)
+                        3-yS+2-e% 45
+         */
         static void Main(string[] args)
         {
             double s = 0;
