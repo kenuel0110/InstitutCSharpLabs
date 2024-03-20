@@ -52,8 +52,6 @@
         {
             try
             {
-                double curs = 0;
-
                 Console.WriteLine("Введите x: ");
                 int x = int.Parse(Console.ReadLine());
                 Console.WriteLine("Введите y: ");
@@ -77,9 +75,15 @@
                         Console.WriteLine($"X >= 4");
                         s = Math.Pow(x, 2) - Math.Pow(y, 2);
                         break;
+
+                    default:
+                        Console.WriteLine($"Условия не соответствуют");
+                        Environment.Exit(0);
+                        break;
                 }
 
                 Console.WriteLine($"Ответ: {s.ToString("F" + 2)}");
+
             }
             catch (Exception ex)
             {
