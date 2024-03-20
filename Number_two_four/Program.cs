@@ -14,18 +14,17 @@ namespace Number_two_four
         {
             try
             {
-                Console.WriteLine("Введите a: ");
-                int a = int.Parse(Console.ReadLine());
-                Console.WriteLine("Введите c: ");
-                int c = int.Parse(Console.ReadLine());
-                double v = 0;
+                double curs = 0;
 
-                if (c >= 2)
-                    v = a + Math.Sqrt(2 * c);
-                else if (c < 2)
-                    v = a - Math.Cos(3 * c);
+                Console.WriteLine("Введите колчество таблеток в упаковке:");
+                int n = int.Parse(Console.ReadLine());
+                Console.WriteLine("Введите кол-во дней: ");
+                int d = int.Parse(Console.ReadLine());
 
-                Console.WriteLine($"Ответ: {v}");
+
+                curs = n * 3;
+
+                Console.WriteLine($"Ответ: {Math.Ceiling(Convert.ToDecimal(curs / d))}");
             }
             catch (Exception ex)
             {
