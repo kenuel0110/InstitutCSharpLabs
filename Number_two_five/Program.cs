@@ -1,4 +1,13 @@
-﻿namespace Number_two_five
+﻿using System;
+using System.Collections.Generic;
+using System.IO;
+using System.Linq;
+using System.Net.Http;
+using System.Threading;
+using System.Threading.Tasks;
+
+
+namespace Number_two_five
 {
     class Number_two_five
     {
@@ -50,28 +59,43 @@
 
         static void Main(string[] args)
         {
-            try
-            {
-                Console.WriteLine("Введите x: ");
-                int x = int.Parse(Console.ReadLine());
-                Console.WriteLine("Введите y: ");
-                int y = int.Parse(Console.ReadLine());
-
+                int x;
+                int y;
                 double s = 0;
 
-                switch (x) 
+                Console.WriteLine("Введите x: ");
+                while (!int.TryParse(Console.ReadLine(), out x)) { Console.WriteLine("Введите x: "); }
+
+                Console.WriteLine("Введите y: ");
+                while (!int.TryParse(Console.ReadLine(), out y)) { Console.WriteLine("Введите y: "); }
+
+                if (x < 1)
+                    s = x + Math.Sin(y);
+                else if (1 <= x && x < 4)
+                    s = x - 3 * Math.Pow(Math.E, y);
+                else if (x >= 4)
+                    s = Math.Pow(x, 2) - Math.Pow(y, 2);
+                else
                 {
-                    case 0 when x < 1:
+                    Console.WriteLine($"Условия не соответствуют");
+                    Environment.Exit(0);
+                }
+
+                Console.WriteLine($"Ответ: {s.ToString("F" + 2)}");
+
+                /*switch (x) 
+                {
+                    case 1 when x < 1:
                         Console.WriteLine($"X < 1");
                         s = x + Math.Sin(y);
                         break;
 
-                    case 1 when 1 <= x && x < 4:
+                    case 2 when 1 <= x && x < 4:
                         Console.WriteLine("1 <= X AND X < 4");
                         s = x - 3 * Math.Pow(Math.E, y);
                         break;
 
-                    case 2 when x >= 4:
+                    case 3 when x >= 4:
                         Console.WriteLine($"X >= 4");
                         s = Math.Pow(x, 2) - Math.Pow(y, 2);
                         break;
@@ -80,17 +104,7 @@
                         Console.WriteLine($"Условия не соответствуют");
                         Environment.Exit(0);
                         break;
-                }
-
-                Console.WriteLine($"Ответ: {s.ToString("F" + 2)}");
-
-            }
-            catch (Exception ex)
-            {
-                Console.WriteLine(ex.Message);
-            }
-
+                }*/
         }
-
     }
 }
